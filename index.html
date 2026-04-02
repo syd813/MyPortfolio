@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Syed Mujeebuddin — Data Engineer specializing in automated data pipelines, ETL, and cloud solutions with AWS, Python & Snowflake.">
+    <meta name="keywords" content="Data Engineer, AWS, Python, ETL, Snowflake, Data Pipeline, Syed Mujeebuddin">
+    <meta name="author" content="Syed Mujeebuddin">
+    <meta property="og:title" content="Syed Mujeebuddin | Data Engineer">
+    <meta property="og:description" content="Building automated data pipelines and transforming complex datasets into actionable insights.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#7c3aed">
+    <title>Syed Mujeebuddin | Data Engineer</title>
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav id="navbar">
+        <a href="#home" class="logo">S<span>M</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- =============================================
+         AWS PROJECT DETAIL OVERLAY
+    ============================================= -->
+    <div class="project-overlay" id="awsProjectOverlay">
+        <div class="project-overlay-header">
+            <h2><i class="fab fa-aws"></i> AWS Automated Data Pipeline</h2>
+            <button class="overlay-close" id="overlayClose" aria-label="Close project details">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="project-detail">
+            <!-- Hero -->
+            <div class="pd-hero">
+                <div class="pd-hero-meta">
+                    <span class="pd-badge">Capstone Project</span>
+                    <span class="pd-date"><i class="far fa-calendar"></i> Dec 2025 – Feb 2026</span>
+                    <span class="pd-date"><i class="fas fa-database"></i> Millions of records per batch</span>
+                </div>
+
+                <h1>Automated Cloud-Based Data Pipeline</h1>
+
+                <p class="pd-hero-subtitle">
+                    A fully automated ETL pipeline built on <strong>AWS</strong> that ingests, validates, cleans, and warehouses large-scale recurring datasets — delivering <strong>analysis-ready data</strong> to ML, BI, and analytics teams with built-in <strong>data quality enforcement</strong> and zero manual intervention.
+                </p>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="pd-architecture pd-section">
+                <p class="pd-architecture-label">System Architecture</p>
+
+                <div class="pd-architecture-img">
+                    <img src="assets/images/pipeline-architecture.jpeg" 
+                         alt="Data Pipeline Architecture"
+                         onerror="this.parentElement.innerHTML='<div class=\'pd-architecture-placeholder\'><i class=\'fas fa-project-diagram\'></i><span>Replace with your architecture diagram</span></div>'">
+                </div>
+            </div>
+
+            <!-- Problem -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">The Problem</h3>
+                <p class="pd-text">
+                    Monthly NYC TLC datasets contain millions of records with missing values, inconsistencies, invalid timestamps, and fare calculation errors. 
+                    Manual cleaning is slow, inconsistent, and does not scale. Existing ETL pipelines do not integrate data quality enforcement directly into processing, leading to unreliable downstream data.
+                </p>
+                <p class="pd-text">
+                    No visibility for stakeholders and the team who wait for the data.
+                </p>
+            </div>
+
+            <!-- Solution -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">The Solution</h3>
+                <p class="pd-text">
+                    Designed and implemented a fully automated cloud-native pipeline that embeds validation, cleaning, and imputation directly into the ETL workflow — ensuring only high-quality, structured data reaches downstream systems.
+                </p>
+
+                <ul class="pd-list">
+                    <li><strong>Automated ingestion</strong> with DynamoDB state tracking (no duplicates or missed runs)</li>
+                    <li><strong>Rule-based validation engine</strong> enforcing business constraints</li>
+                    <li><strong>Imputation layer</strong> to recover invalid records instead of discarding them</li>
+                    <li><strong>Data segmentation</strong> into valid, imputed, and bad datasets</li>
+                    <li><strong>Snowflake integration</strong> for analytics-ready storage</li>
+                    <li><strong>Monitoring UI</strong> for real-time pipeline visibility and stakeholder access</li>
+                </ul>
+            </div>
+
+            <!-- Pipeline -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">Pipeline Workflow</h3>
+                <ul class="pd-list">
+                    <li>Extract monthly dataset → store in S3 (raw)</li>
+                    <li>Validate records using business rules</li>
+                    <li>Impute recoverable records</li>
+                    <li>Store outputs (clean / imputed / bad)</li>
+                    <li>Load clean data into Snowflake</li>
+                    <li>Log metrics to DynamoDB → displayed in UI</li>
+                </ul>
+            </div>
+
+            <!-- Results -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">Performance Snapshot (January 2025)</h3>
+
+                <div class="pd-metrics">
+                    <div class="pd-metric">
+                        <span class="pd-metric-value">4.14M</span>
+                        <span class="pd-metric-label">Records Processed</span>
+                    </div>
+                    <div class="pd-metric">
+                        <span class="pd-metric-value">92.34%</span>
+                        <span class="pd-metric-label">Data Quality</span>
+                    </div>
+                    <div class="pd-metric">
+                        <span class="pd-metric-value">83.02%</span>
+                        <span class="pd-metric-label">Issues Recovered</span>
+                    </div>
+                    <div class="pd-metric">
+                        <span class="pd-metric-value">7.66%</span>
+                        <span class="pd-metric-label">Unusable Data</span>
+                    </div>
+                </div>
+
+                <table class="pd-table" style="margin-top: var(--space-3);">
+                    <tbody>
+                        <tr><td>Total Rows</td><td>4,145,257</td></tr>
+                        <tr><td>Valid Rows</td><td>2,275,465</td></tr>
+                        <tr><td>Imputed Rows</td><td>1,552,265</td></tr>
+                        <tr><td>Bad Rows</td><td>317,527</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">Technology Stack</h3>
+                <div class="pd-tech-grid">
+                    <div class="pd-tech-item">AWS S3</div>
+                    <div class="pd-tech-item">AWS Glue</div>
+                    <div class="pd-tech-item">DynamoDB</div>
+                    <div class="pd-tech-item">Lambda</div>
+                    <div class="pd-tech-item">API Gateway</div>
+                    <div class="pd-tech-item">Snowflake</div>
+                    <div class="pd-tech-item">Python</div>
+                    <div class="pd-tech-item">PySpark</div>
+                    <div class="pd-tech-item">HTML / CSS / JS</div>
+                </div>
+            </div>
+
+            <!-- Differentiation -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">What Makes This Strong</h3>
+                <ul class="pd-list">
+                    <li>Data quality handled inside the pipeline (not external)</li>
+                    <li>High data recovery via imputation</li>
+                    <li>Clear separation of clean vs bad data</li>
+                    <li>New rules can be easily by reporting in Support centre</li>
+                    <li>Clear visibility for stakeholders</li>
+                </ul>
+            </div>
+
+            <!-- Back -->
+            <div style="padding-top: var(--space-4); border-top: 1px solid var(--border);">
+                <button class="btn-secondary" id="overlayBackBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         INTERNAL REPORT OVERLAY
+    ============================================= -->
+    <div class="project-overlay" id="internalReportOverlay">
+        <div class="project-overlay-header">
+            <h2><i class="fas fa-file-pdf"></i> Internal Report System</h2>
+            <button class="overlay-close" id="internalOverlayClose" aria-label="Close project details">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="project-detail">
+            <!-- Hero -->
+            <div class="pd-hero">
+                <div class="pd-hero-meta">
+                    <span class="pd-badge">Freelance Project</span>
+                    <span class="pd-date"><i class="far fa-calendar"></i> Nov 2025</span>
+                </div>
+
+                <h1>Automated Cost Report Generation System</h1>
+
+                <p class="pd-hero-subtitle">
+                    A secure web application that transforms manual Excel report generation into an instant, automated process — reducing preparation time from hours to minutes.
+                </p>
+            </div>
+
+            <!-- Problem -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">The Problem</h3>
+                <p class="pd-text">
+                    The client needed a way to quickly generate cost reports (Summary and detail report) from Excel files instead of doing it manually.
+                </p>
+            </div>
+
+            <!-- Solution -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">The Solution</h3>
+                <p class="pd-text">
+                    Built a web app where users can upload Excel files and get PDF reports instantly.
+                </p>
+
+                <ul class="pd-list">
+                    <li>Reports include summary totals and detailed entries with optional filters like dates or cost codes</li>
+                    <li>Added a login for security, automatic checks on files, and logs to track activity</li>
+                    <li>This cut manual report preparation from hours to minutes, saving a lot of time for the client</li>
+                </ul>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="pd-section">
+                <h3 class="pd-section-title">Technology Stack</h3>
+                <div class="pd-tech-grid">
+                    <div class="pd-tech-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="pd-tech-item"><i class="fas fa-flask"></i> Flask</div>
+                    <div class="pd-tech-item">Pandas</div>
+                    <div class="pd-tech-item">OpenPyXL</div>
+                    <div class="pd-tech-item"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="pd-tech-item"><i class="fab fa-css3"></i> CSS</div>
+                    <div class="pd-tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                </div>
+            </div>
+
+            <!-- Back -->
+            <div style="padding-top: var(--space-4); border-top: 1px solid var(--border);">
+                <button class="btn-secondary" id="internalOverlayBackBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-name">Syed Mujeebuddin</h1>
+                        <p class="hero-title"><span>Data Engineering student</span></p>
+                        <p class="hero-tagline">
+                            I build <strong>data pipelines</strong> and automate workflows, transforming complex datasets into clean, actionable insights through end-to-end engineering solutions.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn-primary">
+                                View Projects <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="resume.pdf" class="btn-secondary" download>
+                                <i class="fas fa-download"></i> Resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="image-wrapper">
+                            <!-- UPDATE THIS PATH TO YOUR IMAGE -->
+                            <img src="images/profile.jpg" alt="Syed Mujeebuddin" width="340" height="340" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section section-alt" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Career</span>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-type">Freelance</span>
+                                <span class="timeline-date"><i class="far fa-calendar"></i> Nov 2025</span>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</span>
+                            </div>
+                            <h3 class="timeline-title">Internal Report System</h3>
+                            <div class="timeline-company">Private Client</div>
+                            <p class="timeline-desc">
+                                Built a web application to generate cost reports from Excel files, replacing manual processes.
+                            </p>
+                            <ul class="timeline-details">
+                                <li>Web app for instant PDF report generation with summary totals and detailed entries</li>
+                                <li>Secure authentication, automatic file validation, and activity logging</li>
+                                <li>Reduced report preparation time from hours to minutes</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Python</span>
+                                <span class="timeline-tag">Flask</span>
+                                <span class="timeline-tag">Pandas</span>
+                                <span class="timeline-tag">ReportLab</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-type">Internship</span>
+                                <span class="timeline-date"><i class="far fa-calendar"></i> Jul – Aug 2025</span>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</span>
+                                <span class="timeline-badge">Certificate</span>
+                            </div>
+                            <h3 class="timeline-title">Commercial Excellence Intern</h3>
+                            <div class="timeline-company">Abbott Rapid Diagnostics</div>
+                            <ul class="timeline-details">
+                                <li>Automated data cleaning for GPR and SAP datasets detecting inconsistencies</li>
+                                <li>Built mapping script with GUI for non-technical users</li>
+                                <li>Deployed Power BI dashboard to visualize duplicates and discrepancies</li>
+                                <li>Created SharePoint site for centralized data access</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Python</span>
+                                <span class="timeline-tag">Power BI</span>
+                                <span class="timeline-tag">SharePoint</span>
+                                <span class="timeline-tag">SAP</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-type">Full Time</span>
+                                <span class="timeline-date"><i class="far fa-calendar"></i> Jul 2022 – Jul 2024</span>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> St Johns, NL</span>
+                            </div>
+                            <h3 class="timeline-title">Senior Sales Associate</h3>
+                            <div class="timeline-company">Mountain Warehouse</div>
+                            <ul class="timeline-details">
+                                <li>Resolved customer inquiries ensuring high satisfaction rates</li>
+                                <li>Trained new hires in operational procedures</li>
+                                <li>Utilized analytics to optimize checkout processes</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Customer Service</span>
+                                <span class="timeline-tag">Analytics</span>
+                                <span class="timeline-tag">Training</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Work</span>
+                    <h2 class="section-title">Recent Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- AWS PROJECT — opens overlay -->
+                    <article class="project-card" id="awsProjectCard">
+                        <div class="project-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">AWS Automated Data Pipeline</h3>
+                                <span class="project-date">Dec 2025 – Feb 2026</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-pill">AWS Glue</span>
+                                <span class="tech-pill">Lambda</span>
+                                <span class="tech-pill">Snowflake</span>
+                                <span class="tech-pill">DynamoDB</span>
+                            </div>
+                            <p class="project-excerpt">
+                                End-to-end automated pipeline ingesting, cleaning, and warehousing 4.14M+ monthly NYC taxi records with 92.34% data quality — featuring a custom monitoring UI for real-time status tracking.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Built scheduled AWS data pipeline reducing hours of manual cleaning</li>
+                                <li>Developed custom monitoring UI showing pipeline status and metrics</li>
+                                <li>Integrated API layer to expose workflow metadata in real time</li>
+                            </ul>
+                            <div class="project-footer">
+                                <div class="project-tech">
+                                    <span class="tech-pill">API Gateway</span>
+                                    <span class="tech-pill">Python</span>
+                                </div>
+                                <a href="#" class="project-cta" id="awsProjectBtn">
+                                    View Details <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Internal Report System</h3>
+                                <span class="project-date">Nov 2025</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Flask</span>
+                                <span class="tech-pill">Pandas</span>
+                                <span class="tech-pill">ReportLab</span>
+                            </div>
+                            <p class="project-excerpt">
+                                A secure web application that transforms manual Excel report generation into an instant, automated process — reducing preparation time from hours to minutes.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Instant PDF generation reducing manual work from hours to minutes</li>
+                                <li>Secure authentication with automatic file validation</li>
+                                <li>Dynamic filtering by date ranges and cost codes</li>
+                            </ul>
+                            <div class="project-footer">
+                                <div class="project-tech">
+                                    <span class="tech-pill">Render</span>
+                                </div>
+                                <a href="#" class="project-cta" id="internalReportBtn">
+                                    View Details <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Air Aware — NASA Space Apps</h3>
+                                <span class="project-date">Oct 2025</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Flask</span>
+                                <span class="tech-pill">NASA API</span>
+                                <span class="tech-pill">ML</span>
+                            </div>
+                            <p class="project-excerpt">
+                                Air quality prediction system using NASA satellite data integrated with weather forecasts, featuring ML models for risk zone classification.
+                            </p>
+                            <ul class="project-bullets">
+                                <li>Integrated NASA satellite data with local weather forecasts</li>
+                                <li>ML models classifying areas by NO₂ levels and environmental factors</li>
+                                <li>Interactive visualization dashboard for real-time monitoring</li>
+                            </ul>
+                            <div class="project-footer">
+                                <div class="project-tech">
+                                    <span class="tech-pill">Pandas</span>
+                                </div>
+                                <a href="#" class="project-cta">
+                                    View Certificate <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Expertise</span>
+                    <h2 class="section-title">Skills & Tools</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Data Engineering</h3>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>AWS (Glue, Lambda, S3)</li>
+                            <li>Snowflake</li>
+                            <li>ETL Pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Data Platforms</h3>
+                        <ul class="skill-list">
+                            <li>AWS (Glue, Lambda, S3, API Gateway)</li>
+                            <li>Snowflake</li>
+                            <li>DynamoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <ul class="skill-list">
+                            <li>Flask</li>
+                            <li>HTML / CSS / JS</li>
+                            <li>Custom UIs</li>
+                            <li>REST APIs</li>
+                            <li>Cloud Deployment</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <ul class="skill-list">
+                            <li>Chat-Gpt</li>
+                            <li>Excel</li>
+                            <li>Power BI</li>
+                            <li>AWS</li>
+                            <li>AI-assisted development tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Background</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm a student at the University of Stirling pursuing a BSc in Software Engineering. I specialize in building automated data pipelines that transform raw, complex datasets into clean, actionable insights.
+                        </p>
+                        <p>
+                            My experience ranges from developing end-to-end AWS data infrastructure to creating user-friendly web applications for data processing. I'm passionate about automation — building solutions that save teams hours of manual work.
+                        </p>
+                        <p>
+                            Currently based in the UAE and open to freelance projects and full-time opportunities in data engineering and automation.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Automation Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section section-dark" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Let's Connect</span>
+                    <h2 class="section-title">Ready to automate your workflows?</h2>
+                </div>
+                <p class="contact-text">
+                    Available for freelance projects and full-time opportunities in Data Engineering and Automation.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:smujeeb20033@example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        smujeeb20033@example.com
+                    </a>
+                    <a href="tel:+971567361643" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        +971 56 736 1643
+                    </a>
+                    <a href="https://www.linkedin.com/in/syed-mujeebuddin-b21866380/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Syed Mujeebuddin · Built with <span>precision</span></p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
